@@ -1,0 +1,22 @@
+MCS NOTES -------------
+
+GetAllDaybooks: PRT: LEFT(ADDR1,4) = BOOK
+SALE BOOKS: PRT: ADDR1 = BOOK, LEFT(GR_CD,1) = "S"
+PURCHASE BOOKS: PRT: ADDR1 = BOOK, LEFT(GR_CD,1) = "P"
+CASH BOOKS: PRT: ADDR1 = BOOK, LEFT(GR_CD,1) = "M"
+BANK BOOKS: PRT: ADDR1 = BOOK, LEFT(GR_CD,1) = "N"
+CREDIT NOTE BOOKS: PRT: ADDR1 = BOOK, LEFT(GR_CD,1) = "U"
+DEBIT NOTE BOOKS: PRT: ADDR1 = BOOK, LEFT(GR_CD,1) = "V"
+JV BOOKS: PRT: ADDR1 = BOOK, LEFT(GR_CD,1) = "Z"
+
+SALE, PURCHASE LineItems == LEFT(ADDR1,6) == "BOOKIN"
+
+------------------------------------------
+
+PRT = ACC_MASTER (includes Daybooks also)
+QLY = ITEM_MASTER
+TRN = TXN FILE
+INM = All LINE ITEMS
+PRS = Row Column Master (TAX Column)
+------------------------
+

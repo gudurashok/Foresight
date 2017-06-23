@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScalableApps.Foresight.Logic</RootNamespace>
+    <AssemblyName>Foresight.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Account.cs" />
+    <Compile Include="Business\AccountMonthlyLedger.cs" />
+    <Compile Include="Business\ChartOfAccountMapper.cs" />
+    <Compile Include="Business\CommandProp.cs" />
+    <Compile Include="Business\Command.cs" />
+    <Compile Include="Business\AccountOpeningBalance.cs" />
+    <Compile Include="Business\CreditNote.cs" />
+    <Compile Include="Business\CreditNoteLine.cs" />
+    <Compile Include="Business\DebitNote.cs" />
+    <Compile Include="Business\DebitNoteLine.cs" />
+    <Compile Include="Business\LineItem.cs" />
+    <Compile Include="Business\SourceCompanyPeriod.cs" />
+    <Compile Include="Business\ItemMonthlyLedger.cs" />
+    <Compile Include="Business\RowColumn.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\AccountTransTables.cs" />
+    <Compile Include="Common\LedgerUpdateAbortException.cs" />
+    <Compile Include="Common\ItemTransTables.cs" />
+    <Compile Include="Common\UpdatingEventArgs.cs" />
+    <Compile Include="Import\LedgerBuilder.cs" />
+    <Compile Include="Report\AccountItemValue.cs" />
+    <Compile Include="Report\JVAccountDetail.cs" />
+    <Compile Include="Report\TopNVendorPurchaseItemsDataContext.cs" />
+    <Compile Include="Report\TopNCutomerSaleItemsDataContext.cs" />
+    <Compile Include="Report\TopNAccountItemsBaseDataContext.cs" />
+    <Compile Include="Report\TopNPurchaseItemsDataContext.cs" />
+    <Compile Include="Report\TopNSaleItemsDataContext.cs" />
+    <Compile Include="Report\TopNItemsBaseDataContext.cs" />
+    <Compile Include="Report\ItemValue.cs" />
+    <Compile Include="Report\LedgerSummary.cs" />
+    <Compile Include="Business\DebitNoteHeader.cs" />
+    <Compile Include="Business\CreditNoteHeader.cs" />
+    <Compile Include="Business\InvoiceTerm.cs" />
+    <Compile Include="Common\Util.cs" />
+    <Compile Include="Business\CompanyGroup.cs" />
+    <Compile Include="Business\CompanyPeriod.cs" />
+    <Compile Include="Business\ChartOfAccount.cs" />
+    <Compile Include="Business\CashTransaction.cs" />
+    <Compile Include="Business\BankPayment.cs" />
+    <Compile Include="Business\BankReceipt.cs" />
+    <Compile Include="Business\Company.cs" />
+    <Compile Include="Common\ErrorMessage.cs" />
+    <Compile Include="Common\Session.cs" />
+    <Compile Include="Connection\DbConnectionFactory.cs" />
+    <Compile Include="DataAccess\CoGroupDatabase.cs" />
+    <Compile Include="DataAccess\CoGroupSqlCeDatabase.cs" />
+    <Compile Include="DataAccess\CoGroupDatabaseFactory.cs" />
+    <Compile Include="DataAccess\CoGroupSqlServerDatabase.cs" />
+    <Compile Include="DataAccess\ForesightSqlServerDatabase.cs" />
+    <Compile Include="DataAccess\ForesightDatabaseFactory.cs" />
+    <Compile Include="DataAccess\ForesightSqlCeDatabase.cs" />
+    <Compile Include="DataAccess\ForesightDatabase.cs" />
+    <Compile Include="Report\AccountPeriodValue.cs" />
+    <Compile Include="Report\CompanyPeriodValue.cs" />
+    <Compile Include="Report\CompanyPeriodSaleDataContext.cs" />
+    <Compile Include="Report\BuyingTrendDataContext.cs" />
+    <Compile Include="Report\BuyingTrendValue.cs" />
+    <Compile Include="Report\CompanyTopperBaseDataContext.cs" />
+    <Compile Include="Report\CompanyAccountBaseDataContext.cs" />
+    <Compile Include="Report\CompanyCustomerDataContext.cs" />
+    <Compile Include="Report\CompanyExpenseDataContext.cs" />
+    <Compile Include="Report\LedgerDetailDataContext.cs" />
+    <Compile Include="Report\LedgerDetail.cs" />
+    <Compile Include="Report\AccountDataContext.cs" />
+    <Compile Include="Report\LedgerSummaryDataContext.cs" />
+    <Compile Include="Report\PeriodTopCustomersDataContext.cs" />
+    <Compile Include="Report\PeriodTopExpensesDataContext.cs" />
+    <Compile Include="Report\PeriodTopperBaseDataContext.cs" />
+    <Compile Include="Report\TopperBaseDataContext.cs" />
+    <Compile Include="Report\GenuineSale.cs" />
+    <Compile Include="Report\GenuineSaleDataContext.cs" />
+    <Compile Include="Report\NewPartyCountDataContext.cs" />
+    <Compile Include="Report\LostPartyCountDataContext.cs" />
+    <Compile Include="Report\PartyCountBaseDataContext.cs" />
+    <Compile Include="Report\NewLostPartyCount.cs" />
+    <Compile Include="Report\PeriodCustomerDataContext.cs" />
+    <Compile Include="Report\PeriodExpenseDataContext.cs" />
+    <Compile Include="Report\PeriodAccountBaseDataContext.cs" />
+    <Compile Include="Report\CompanyTopCustomersDataContext.cs" />
+    <Compile Include="Report\CompanyTopExpensesDataContext.cs" />
+    <Compile Include="Report\NewLostPartyValue.cs" />
+    <Compile Include="Report\PartyAssociationDataContext.cs" />
+    <Compile Include="Report\LostPartyDataContext.cs" />
+    <Compile Include="Report\NewPartyDataContext.cs" />
+    <Compile Include="Report\AccountValue.cs" />
+    <Compile Include="Report\TopNCustomersDataContext.cs" />
+    <Compile Include="Report\TopNAccountsBaseDataContext.cs" />
+    <Compile Include="Report\TrailBalance.cs" />
+    <Compile Include="Report\YearlyTopperValue.cs" />
+    <Compile Include="Report\ReportData.cs" />
+    <Compile Include="Report\ReportDataContext.cs" />
+    <Compile Include="Report\ReportEnums.cs" />
+    <Compile Include="Report\TopNExpensesDataContext.cs" />
+    <Compile Include="Sql\ReportQueries.cs" />
+    <Compile Include="Sql\TcsSqlQueries.cs" />
+    <Compile Include="Business\TransactionHeader.cs" />
+    <Compile Include="Sql\McsSqlQueries.cs" />
+    <Compile Include="Connection\TargetDbConnInfoFactory.cs" />
+    <Compile Include="Business\MiscMaterialIssue.cs" />
+    <Compile Include="Business\InventoryReceive.cs" />
+    <Compile Include="Business\InventoryIssue.cs" />
+    <Compile Include="Business\ItemLot.cs" />
+    <Compile Include="Business\JournalVoucher.cs" />
+    <Compile Include="Business\PurchaseInvoice.cs" />
+    <Compile Include="Business\PurchaseInvoiceHeader.cs" />
+    <Compile Include="Business\PurchaseInvoiceLine.cs" />
+    <Compile Include="Business\PurchaseInvoiceTerm.cs" />
+    <Compile Include="Business\SaleInvoice.cs" />
+    <Compile Include="Business\SaleInvoiceTerm.cs" />
+    <Compile Include="Business\ItemGroup.cs" />
+    <Compile Include="Business\ItemCategory.cs" />
+    <Compile Include="Business\Item.cs" />
+    <Compile Include="Business\SaleInvoiceLine.cs" />
+    <Compile Include="Business\SaleInvoiceHeaderEx.cs" />
+    <Compile Include="Business\SaleInvoiceHeader.cs" />
+    <Compile Include="Import\DeleteImportedData.cs" />
+    <Compile Include="DataAccess\DatabaseFactory.cs" />
+    <Compile Include="DataAccess\Database.cs" />
+    <Compile Include="DataAccess\DataContext.cs" />
+    <Compile Include="Business\DatePeriod.cs" />
+    <Compile Include="Business\Daybook.cs" />
+    <Compile Include="Sql\EasySqlQueries.cs" />
+    <Compile Include="Common\Enumerations.cs" />
+    <Compile Include="Connection\IDbConnectionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Rules.cs" />
+    <Compile Include="Connection\SqlCeConnectionInfo.cs" />
+    <Compile Include="Sql\SqlQueries.cs" />
+    <Compile Include="Connection\SqlServerConnectionInfo.cs" />
+    <Compile Include="Business\Login.cs" />
+    <Compile Include="Common\ValidationException.cs" />
+    <Compile Include="Common\ValidationResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

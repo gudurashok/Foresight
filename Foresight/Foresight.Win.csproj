@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3567E06F-EEE3-4C29-B651-38149642597D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScalableApps.Foresight.Win</RootNamespace>
+    <AssemblyName>Foresight</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ScalableApps.Foresight.Win.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Foresight.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Utilities.cs" />
+    <Compile Include="Common\CompanyViewProcessor.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\ListViewItemComparer.cs" />
+    <Compile Include="Common\ListViewLineColorProcessor.cs" />
+    <Compile Include="Controls\iTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\iListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\FAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FAbout.Designer.cs">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FFormBase.Designer.cs">
+      <DependentUpon>FFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FLedgerUpdater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FLedgerUpdater.Designer.cs">
+      <DependentUpon>FLedgerUpdater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FServer.Designer.cs">
+      <DependentUpon>FServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroups.Designer.cs">
+      <DependentUpon>FCompanyGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ForesightApplication.cs" />
+    <Compile Include="Forms\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FSplash.Designer.cs">
+      <DependentUpon>FSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\StopWatch.cs" />
+    <Compile Include="Reports\UTopNAccountWiseItemsReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UTopNAccountWiseItemsReport.Designer.cs">
+      <DependentUpon>UTopNAccountWiseItemsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UTopNItemsReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UTopNItemsReport.Designer.cs">
+      <DependentUpon>UTopNItemsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UDaybookListReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UDaybookListReport.Designer.cs">
+      <DependentUpon>UDaybookListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ULedgerSummaryReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ULedgerSummaryReport.Designer.cs">
+      <DependentUpon>ULedgerSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UAccountListReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UAccountListReport.Designer.cs">
+      <DependentUpon>UAccountListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FReportViewer.Designer.cs">
+      <DependentUpon>FReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ULedgerDetailReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\ULedgerDetailReport.Designer.cs">
+      <DependentUpon>ULedgerDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UCompanyAccountValueReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UCompanyAccountValueReport.Designer.cs">
+      <DependentUpon>UCompanyAccountValueReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UYearlyTopperReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UYearlyTopperReport.Designer.cs">
+      <DependentUpon>UYearlyTopperReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UGenuineSaleReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UGenuineSaleReport.Designer.cs">
+      <DependentUpon>UGenuineSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UPartyCountReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UPartyCountReport.Designer.cs">
+      <DependentUpon>UPartyCountReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UPeriodAccountValueReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UPeriodAccountValueReport.Designer.cs">
+      <DependentUpon>UPeriodAccountValueReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UCompanyPeriodSaleReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UCompanyPeriodSaleReport.Designer.cs">
+      <DependentUpon>UCompanyPeriodSaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UBuyingTrendReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UBuyingTrendReport.Designer.cs">
+      <DependentUpon>UBuyingTrendReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UFindAccountsReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UFindAccountsReport.Designer.cs">
+      <DependentUpon>UFindAccountsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FAccounts.Designer.cs">
+      <DependentUpon>FAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FCompanyPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FCompanyPeriods.Designer.cs">
+      <DependentUpon>FCompanyPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UReportBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UReportBase.Designer.cs">
+      <DependentUpon>UReportBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UTopNAccountsReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UTopNAccountsReport.Designer.cs">
+      <DependentUpon>UTopNAccountsReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Foresight.Logic\Foresight.Logic.csproj">
+      <Project>{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}</Project>
+      <Name>Foresight.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FAbout.resx">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FFormBase.resx">
+      <DependentUpon>FFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FLedgerUpdater.resx">
+      <DependentUpon>FLedgerUpdater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FServer.resx">
+      <DependentUpon>FServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCompanyGroups.resx">
+      <DependentUpon>FCompanyGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FSplash.resx">
+      <DependentUpon>FSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UTopNAccountWiseItemsReport.resx">
+      <DependentUpon>UTopNAccountWiseItemsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UTopNItemsReport.resx">
+      <DependentUpon>UTopNItemsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UDaybookListReport.resx">
+      <DependentUpon>UDaybookListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ULedgerSummaryReport.resx">
+      <DependentUpon>ULedgerSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UAccountListReport.resx">
+      <DependentUpon>UAccountListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FReportViewer.resx">
+      <DependentUpon>FReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ULedgerDetailReport.resx">
+      <DependentUpon>ULedgerDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UCompanyAccountValueReport.resx">
+      <DependentUpon>UCompanyAccountValueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UYearlyTopperReport.resx">
+      <DependentUpon>UYearlyTopperReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UGenuineSaleReport.resx">
+      <DependentUpon>UGenuineSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UPartyCountReport.resx">
+      <DependentUpon>UPartyCountReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UPeriodAccountValueReport.resx">
+      <DependentUpon>UPeriodAccountValueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UCompanyPeriodSaleReport.resx">
+      <DependentUpon>UCompanyPeriodSaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UBuyingTrendReport.resx">
+      <DependentUpon>UBuyingTrendReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UFindAccountsReport.resx">
+      <DependentUpon>UFindAccountsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FAccounts.resx">
+      <DependentUpon>FAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FCompanyPeriods.resx">
+      <DependentUpon>FCompanyPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UReportBase.resx">
+      <DependentUpon>UReportBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UTopNAccountsReport.resx">
+      <DependentUpon>UTopNAccountsReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Foresight.ico" />
+    <Content Include="Resources\Foresight.ico" />
+    <None Include="Resources\ForesightLogo.png" />
+    <None Include="Resources\ForesightSplash.png" />
+    <None Include="Resources\Foresight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

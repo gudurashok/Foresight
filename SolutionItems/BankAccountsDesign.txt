@@ -1,0 +1,40 @@
+1 - BOB, Udh - CC
+2 - BOB, Udh - SA
+3 - BOB, KH  - OD
+4 - BOB, KH -
+5 - BOB, KH -
+6 - SBI, Udh -
+7 - SBI, Udh -
+8 - SPB, RR   - Loan
+9 - SPB, RR  - Loan
+10
+
+GLG,  	AcID, 	Name
+20303	101	BOB A/c 9012    
+20303	102	BOB A/c 20612
+20303	103	BOB A/c 40512
+20303	104	BOB A/c 5012
+20303	105	BOB A/c 95612
+20303	106	BOB A/c 9012
+20303	107	BOB A/c 95012
+20303	108	BOB A/c 90712
+
+CashBankAccounts
+1 - BOB, Udh - 1  fld1, fld2, fld3, fld4, 101
+2 - BOB, Udh - 1  fld1, fld2, fld3, fld4  102
+3 - BOB, KH  - 2  fld1, fld2, fld3, fld4  103
+4 - BOB, KH -  2  fld1, fld2, fld3, fld4  
+5 - BOB, KH -  2  fld1, fld2, fld3, fld4
+6 - SBI, Udh - 3  fld1, fld2, fld3, fld4
+7 - SBI, Udh - 3  fld1, fld2, fld3, fld4
+8 - SPB, RR  - 4  fld1, fld2, fld3, fld4
+9 - SPB, RR  - 4  fld1, fld2, fld3, fld4
+10 - Cashbook - N
+11 - Cash Book - S 
+	
+Contact
+
+1 - BOB, Udh
+2 - BOB, Kh
+3 - SBI, Udh
+4 - SPC, RR

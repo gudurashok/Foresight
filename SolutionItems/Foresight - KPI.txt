@@ -1,0 +1,504 @@
+1. Main Window
+2. User creation: 
+   - Users and [Roles: Admin, Marketing, [Finance: AR, AP], Legal, Purchase]
+3. Login
+4. Import Setup: Admin
+   Import Info:
+	   Source: Daybook List: 
+		   T: HCount, LIcount, 
+		   M: AccountCount, ItemCount
+	   Destination: 
+5. Reports: KPI
+   a) Sale: Period-Wise, Top/Bottom-N:[Customers, Items, [Single:InvoiceAmt, ]], 
+   b) Purchase: Period-Wise, Top-N:[Customers, Items, [Single:InvoiceAmt, ]], 
+   c) Cash & Bank: Period-Wise, 
+   d) Total Sales vs. Last Year % (+/-)
+   e) lost accounts (customers/vendors)
+6. Budgets and Targets
+7. New-Customers in this year
+8. Comparitive analysis of specific figures
+10. Top-n customers share (%) in total sale
+11. Sales. Item-wise, Area-wise
+12. Cash Sale vs. Credit Sale year wise ratio... profitability
+13. 
+
+
+
+KPI: Top 5 Cutomers:
+From: 01-APR-2001 to 31-MAR-2009
+Rank	Name	Amount (in Lac)
+-------------------------------
+1.	RIL	45.25
+2.	SPL	35.50
+3.	WPL	25.00
+4.	ABC	10.05
+5. 	PQR	05.01
+
+KPI: Top 5 Items
+From: 01-APR-2001 to 31-MAR-2009
+Rank	Name	Amount (in Lac)
+--------------------------------
+======================================================================================
+
+Foresight Analytics
+===================
+DONE: 1. Year wise sale/pur/expense (GLG) etc.:
+---------------------------------------------------
+Year	2011		2010		2009		
+===================================================
+Sale:	1.05(0.02+)	0.95(0.01-)	0.85(0.07-)	
+
+DONE: 2. CompYear wise sale:
+-----------------------------------------------------------
+Co.		2011		2010		2009		
+===========================================================
+RIL	Sale:	1.05(0.02+)	0.95(0.01-)	0.85
+ARL	Sale:	1.05(0.02+)	0.95(0.01-)	0.85
+INY	Sale:	1.05(0.02+)	0.95(0.01-)	0.85
+-----------------------------------------------------------
+TOT	Sale:	3.05(0.02+)	3.95(0.01-)	3.85
+
+Criteria:
+Companies: (all), selected
+Years: (all), selected
+Format: Crores/Lacs
+
+2010: 70,000
+2011: 90,000
+
+Trend % = ((2011-2010)/2010) * 100
+	  Value = (2011-2010)
+=============================================================
+DONE: 2............
+Criteria: 
+a. Selction of Companies & Periods
+b. Top: <n>
+NOTE: The top ranking might change if the item rates are fluctuated.
+so keep the item-quantity in sync with the total sale amount.
+there could be a separate report showing both the things in parallel.
+
+Top-N Customers: for <Comp> & <Year>
+--------------------------------------------------------------------------------
+Rank	Customer	Amount	%of sale	
+--------------------------------------------------------------------------------
+1	RIL		10.00	15.45%	(amount/total sale of co.) * 100
+2	S3PL	09.90	11.40%
+3	MRF		08.05	10.02%
+4	INY		08.00	09.01%
+5	SCS		07.65	09.00%
+================================================================
+DONE: 3....Customer buying trend
+
+NOTE: The top ranking might change if the item rates are fluctuated.
+so keep the item-quantity in sync with the total sale amount.
+there could be a separate report showing both the things in parallel.
+
+Select Company/Year
+Customer: select
+Customer: Buying Trend
+Color Code: R/G/Y: Red-Bad, Y-Normal;, G-Good
+----------------------------------------------------
+Year	Jan		Feb		Mar		Apr		May		Jun...
+----------------------------------------------------
+2011	50.00	60.00	45.00	30.00	
+2010
+2009
+2008
+2007
+2006
+...
+=====================================================
+Total:  102.00	150.00 ...
+-----------------------------------------------------
+
+On clicking a row in above report should show the following
+----------------------------------------------------
+Co.		Jan		Feb		Mar		Apr		May		Jun...
+----------------------------------------------------
+STI		10.00	20.00	15.00	10.00	
+MAX
+SST
+STP
+...
+=====================================================
+Total:  102.00	150.00 ...
+-----------------------------------------------------
+(Total/12) > month fig  == Green
+(Total/12) = month fig  == Yellow
+(Total/12) < month fig  == Red
+
+DONE: 4) Lost accounts (customers/vendors)  
+-----------------------------------------------------
+Current Criteria: Select Company/Year
+Customer/Vendor: ->> separate
+Show only customers: 10 to 15
+Search for account who don't have transactions in most rcent year
+and have transactions previous years. show biggest amount first in decreasing order.
+
+Rank 	Customer	Figure	First Date		Last Date
+------------------------------------------------------
+1		RIL			15.50	01/04/2005		01/04/2010
+2		ABC			06.50	14/03/2003		14/03/2009
+3		XYZ			06.50	31/05/2007		31/05/2009
+4		PQR			03.30	01/04/2004		01/04/2007
+5		ATL			02.50	13/09/2000		13/09/2008
+6		RQW			01.50	01/05/2005		01/05/2010
+...
+
+DONE: 4a) Another format of Lost accounts (customers/vendors)  
+------------------------------------------------
+Year		Amount		No.Of Cust/Vend
+================================================
+2011		100.00		12		
+2010		 99.53		80
+2009		 93.03		60
+2008		 90.53		50
+2007		 89.53		89
+2006		 79.33		90
+------------------------------------------------
+
+========================================================================
+5. Region-wise sale
+Criteria: Company/Year
+Area Names: city and state names... State then City then Area
+------------------------------------------------
+Area Name	Amount		No.Of Cust/Vend
+================================================
+HYD		100.00		12		>> Drill to city
+MUM		 99.53		80
+BLR		 93.03		60
+PUN		 90.53		50
+AHD		 89.53		89
+BAR		 79.33		90
+------------------------------------------------
+
+DONE: 6. New-Customer/Vendor in this year
+Criteria: select Company/Year 
+
+Rank 	Customer	Figure	First Date		Last Date
+------------------------------------------------------
+1		RIL			15.50	01/04/2005		01/04/2010
+2		ABC			06.50	14/03/2003		14/03/2009
+3		XYZ			06.50	31/05/2007		31/05/2009
+4		PQR			03.30	01/04/2004		01/04/2007
+5		ATL			02.50	13/09/2000		13/09/2008
+6		RQW			01.50	01/05/2005		01/05/2010
+...
+
+DONE: 6a) Another format of  New-Customer/Vendor in this year
+------------------------------------------------
+Year		Amount		No.Of Cust/Vend
+================================================
+2011		100.00		12		
+2010		 99.53		80
+2009		 93.03		60
+2008		 90.53		50
+2007		 89.53		89
+2006		 79.33		90
+------------------------------------------------
+
+7. Average invoice amount
+
+total sale / total count of invoices == Avg amt. of single invoice then
+compare every invoice with (Avg amount of single invoice)
+below... number of invoices of (Avg amount of single invoice)
+above... number of invoices of (Avg amount of single invoice)
+Benefit: convert below level customers into above level... or stop
+then the load can decreased and there is no significant profitability loss 
+and the corresponding effort can be divert into more productive tasks.
+==============================================================================
+
+DONE: 8. Top N Expenses Report
+-----------------------------------------------------------------------
+Criteria: select single company/ single year
+Top: <N/all>
+
+Rank	Expsense Name		Amount	%of total
+---------------------------------------------------------------------------
+1		Purchase			63.00	69.20 %		
+2		Transportation		23.00	12.22 %
+3		Energy				10.00	08.22 %
+4		Labour				09.00	07.22 %
+5		Legal				03.00	07.02 %
+6		Salary				02.50	05.22 %
+7		Office Expenses		 0.10	02.22 %
+
+--------------------------------------------------------------------------
+8a) Expense Analysis Report
+--------------------------------------------------------------------------
+Criteria: select multi company/ multi year
+Top: <N/all>
+
+=================================================================================
+
+DONE: 9. Year wise expense:
+-----------------------------------------------------------
+ExpName	2011		2010		2009		20.
+===========================================================
+Exp1	1.05(0.02+)	0.95(0.01-)	0.85(0.07
+Exp2	1.05(0.02+)	0.95(0.01-)	0.85(0.07
+Exp3	1.05(0.02+)	0.95(0.01-)	0.85(0.07
+-----------------------------------------------------------
+TOT		3.05(0.02+)	3.95(0.01-)	3.85(0.07
+
+=================================================================================
+
+10. Selected Income A/c analysis
+Criteria: Company/Year  <-- Actuals should come from most recent
+Total Target of the year/month: <Amount>
+
+Month Foresight	Target	Actual	Diff-Amt	Diff%age
+-------------------------------------------------------------
+Apr	==	95.00	80.00	-- -/+	--			+/-
+May	==	80.00	96.25	--		--
+Jun	==	75.00	78.50	--		--
+.............................................................
+jul	==	80.50	52.00	--		--
+aug	==	...	...	..		--
+sep	==	...	...	..		--
+oct	==	...	...	..		--
+nov	==	...	...	..		--
+dec	==	...	...	..		--
+===============================================================
+Total  == 	770.00  785.00	--		--
+
+=================================================================================
+
+11. Finance analysis
+Loan Account: list GRCD: 'C' - Secured Loan select one a/c
+CC, OD: 
+
+=================================================================================
+
+12. 
+Contact: Movment: for Each/Given/TopN/BottomN contact:
+
+1. Id, basic detail capture from legacy data
+3. first transaction date
+4. latest activity date and what trasaction?
+5. total volume of transaction w.r.t quantity, amount, item
+6. summary of deals like purchsae sale, bank cash etc.
+7. contact rating: good, bad, can do care, must care, ignorable etc.
+
+additional info on drill-through
+breakup of sale, purchase, year-wise month-wise, quartlery,
+-------------------------------------------------------------------
+=================================================================================
+
+12a. Party-wise grouping
+	a) History
+	b) Status
+	c) Bird's eye view
+	d) Item/Type that is sold
+	e) Peak time month wise
+	f) Show is peak time comparision Good or Bad
+	g) Which customer stopped sale/purchase and since when
+
+=================================================================================
+
+13. Item movement:
+Top<N> items
+same as above... biggest <N> buyer/supplier
+
+=================================================================================
+
+14. Given period's or once up-on atime before Topper Customer's Today's position.
+Today's top customers between period: or 3-month back, 6-month back, 1-yr back...
+Selected customer's rank position in multiple years
+
+=================================================================================
+
+DONE: 15.
+Year-wise topper... in given co. periods
+
+Year	Account		Amount	Sale %
+-----------------------------------
+2010	RIL			10.0	25.00
+2010	SATYAM		11.0	26.00
+2010	MAHA		05.0	13.00
+-----------------------------------
+2009	KPI			10.0	25.00
+2009	SATYAM		15.0	26.00
+2009	SRI			05.5	12.00
+...
+-----------------------
+=================================================================================
+
+DONE: 16. Genuine Sale report
+Ratio of Sale vs. Other than Payments (Nakre) ---
+Customer Side (Debit):
+Opposite side(Credit side): Non Cash and Bank
+Sale vs. (Cash and Bank) ===>  GOOD CUSTOMER
+Sale vs. (Non Cash and Bank [Nakre...]) ===>  BAD CUSTOMER
+1. Sale Return (Good goods conditioned return)
+1. Sale Return  (Bad goods conditioned return)
+2. Bank Cheque Return
+3. Discount
+4. Credit Note
+5. Purchase
+
+Example: ABC
+-----------------------
+Debit		Credit
+-----------------------
+12.00 s   	11.00  	cash
+10.00 s	 	8.00  	bank
+ -	 		1.00  	disc
+			2.00  	s-ret
+25.00 s		20.00	bank
+20.00 chkr	 --
+			20.00  	s-ret
+			4.00  	cash
+			1.00  	disc
+15.00 s	 	13.00	cash
+			2.00	disc
+			15.00 	sret
+13.00 cash
+2.00 droll	 
+17.00 s	 	13.00	cash
+--------------------------------
+12+10+25+15+17					79 Sale
+20+13							33 Bad Debts
+2								2 droll
+								114
+
+11+8+4+13+13 =   				49 payments (realised only)
+20								20 Bad payment - chkr
+1+2+20+1+2+15					41 disc + sret
+								110
+bal								4
+
+CompanyYear: Selected/Year
+Criteria: TopN
+CustName	Total-Sale	Non-Sale-Db	Genuine Sale %	Non-Sale-Db %	
+				(A)			(B)		A/(A+B) * 100	B/(A+B) * 100
+--------------------------------------------------------------------------------
+ABC			79.00		35.00			69.29%			30.70
+KCR			--			--				--				--
+
+=================================================================================
+
+17. Item stock movement analysis: The less the stock the more profit. 
+	So analyse how much stock is holding all the time/any movement of time.
+	Calculate excess stock holding overhead on the overall business.
+
+=================================================================================
+18. Story-1: We are in in second quarter. We observed that the 1st quarter sale went down. 
+	If we progress like this then there would be a chance that the total sale of 
+	the year would go even go down and our share-rate /stock value would go down.
+	to prevent above situation we would need to identify the cause then will improve.
+	So will need to see what is the total comparitvie sale histroy of the 1st quarter and 
+	then area-wise, item-wise, item-group-wise, sale-exec wise sale trends.
+	and analyse the sale item/group, sale-exec, area-wise 
+	and know the which area, which item-rate, item-category, sale-exec 
+	caused the total sale to go down. what is the impact of this trend on the yearly-profit.
+	If we come to know a specific area's sale went down then what is 
+	the reason: like sale-exec changed, incentive, item-rate went down, 
+	whether there is any bundh/strike in that are like in hyd, or any other business's imapct
+	it could be a moral reason, mob, market conditions bad weather etc.., 
+	competition, competetors' product is good, low-rate, our quality donw etc.
+
+=================================================================================
+19. Dynamic Report
+Master: Party, Item, Daybook
+Transations: All trastions of the daybook
+Customer:Master
+Item:Master
+
+Sale: Transaction
+	   Header, Line
+
+id	nr		date	customer	item	amount
+-----------------------------------------------
+1	101		01/04	ABC			Q1		300.00
+2	102		01/04	QWE			Q1		300.00
+3	103		01/04	QAZ			Q1		290.00
+4	104		01/04	QAZ			Q2		580.00
+5	105		02/04	ABC			Q2		600.00
+6	106		02/04	ABC			Q2		590.00
+
+NOTE: Daybook is our gateway to Zoom: i.e. when any master's colum cell is double clicked 
+	  in any report we'll use daybook as our gateway to explode (zoom-in) to other type of transactions
+
+i)   should allow navigate back and forth
+ii)  show history like Chess-Game moves-list
+iii) Google's internet browser history
+iv)  open each new report (zoomed) in new TabPage.
+v)   Shift, Control, Mouse left and right buttons would allow changing zooming and TabPage display/presentation style
+vi)  there would be a default doubleClick behavior
+vii) list the transaction's summary of the all daybooks realted the selected master's code (type of transation's total-amount, number of records)
+	 show the selected Cell value and type of the value on the heading of the Gateway. Display the selection criteria on the title as info. and show
+	 actual report in the details window. Footer should show the summary/totals etc. History-Path should be displayed on the side.
+viii)  Details winodw whould show the grid and the grid should allow changing order of columns, column can be remove, recall. 
+	 Allow Aggregation of selected column.
+
+A) one master at a time (Customer)
+B) old master (Customer) + another type of master (Item)
+C) old master (Customer) + another new master (Customer) of same type
+
+20.
+Outstanding/Balance amount Topper Cust/Vend:
+ 
+21.
+Credit Period Usage and Missuse by Customer: Compare bill date and amount received date 
+and see if the diff-days are more than the credit period allowed/given and rate accordign to.
+If anybody paid before credit period then that diff-days should be indicated.
+
+DONE: 22. Account Ledger:
+Criteria: Account: <Select...>
+
+Year	Op.Amt	TDr.Amount TCr.Amount	Balance
+-----------------------------------------------------
+2011 -->999.00	455.00		43233.00	9099.99
+2010									999.00 --> = must equal
+2009	
+...
+================================================================
+Year: 2011
+Month	Op.Amt	TDr.Amount TCr.Amount	Balance
+-----------------------------------------------------
+Jan	-->999.00	455.00		43233.00	9099.99
+Feb										999.00 --> = must equal
+Mar	
+...
+================================================================
+Year: 2011, January
+Co.		Date	Doc#	Daybook		Amount		Notes
+-----------------------------------------------------
+MAX		01/Jan	100		SALE		200			blah blah
+SHI		20/Jan  900		CASH		8992		ram ram...
+....
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Comp	Op.Amt	TDr.Amount TCr.Amount	Balance
+-----------------------------------------------------
+MAN -->999.00	455.00		43233.00	9099.99
+SHI										999.00 --> = must equal
+MAX	
+...
+================================================================
+SHI
+Year	Op.Amt	TDr.Amount TCr.Amount	Balance
+-----------------------------------------------------
+2011 -->999.00	455.00		43233.00	9099.99
+2010									999.00 --> = must equal
+2009	
+...
+================================================================
+SHI
+Year: 2011
+Month	Op.Amt	TDr.Amount TCr.Amount	Balance
+-----------------------------------------------------
+Jan	-->999.00	455.00		43233.00	9099.99
+Feb										999.00 --> = must equal
+Mar	
+...
+================================================================
+SHI
+Year: 2011, January
+Comp	Date	Doc#	Daybook		Amount		Notes
+-----------------------------------------------------------
+SHI		01/Jan	100		SALE		200			blah blah
+SHI		20/Jan  900		CASH		8992		ram ram...
+....
+================================================================

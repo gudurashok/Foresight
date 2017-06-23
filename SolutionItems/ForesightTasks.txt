@@ -1,0 +1,63 @@
+New Architecture:
+- Don't importing full data.
+- Build only the aggregate/dimension/fact tables to be used by the reports.
+- Remove all the tables other than aggregates
+- Copy full source data (only used .dbf files) to Foresight Importdata folder an build the aggregate tables. 
+- When a particular report needs full data, use the above copied data directly at that time.
+  Note: we can also use data provider source folder but that might have changed since the last import. 
+        In this case Foresight can check and prompt for rebuild dimension etc.
+- Display an alert message (showing the last imported date/time) during login and somewhere/title (which is allways visible).
+- There should also a facility available to create a SqlCe copy of the SqlServer data. 
+  This allows moving and running without connect to server when in client/server mode using Sql Server.
+- 
+
+
+0. Check where ever Party grouping checkbox is necessary or not.
+0. Refreshing Report rather than <show>: there could be a concept of refresh vs. show. when criteria changes then only the report should be repopulte else it can only show as is.
+0. When using Lion (Sqlserver) an exception is thrown 'Database path cannot be null' while editing new company group
+0. Enter and back buttons should be work in ledger reports.
+0. Account Ledger: Add one more level for Line-item display. While in last level, 
+   display line-item details if sale or purchase is doulble cliked.
+0. GenuineSale report: Year wise...
+0. Buying Trend: selected company... only one year...
+0. Year wise Lost/New: double click should show name wise report
+------------------------------------------------------------------------------------------------
+1. Data cleaning of account address
+2. Display Period for each report: Display criteria
+3. FMain: Make CommandBar Hidable
+4. Try parallel import (Sales, Purchase, Cash)
+6. Error Handling: a) non found import codes like a/c, itm, b)
+7. AutoFix: Currupted data .DBF
+8. Setting for Foresight <Data> folder
+9. Remember grid column sizes
+10. Import:	Dimension building
+11.	Import:	Precalculate possible required values
+12. Import: Keeping multiple copies of current year's data while importing
+13. <Change namespaces of all classes which are moved to subfolders>
+14. Report Snapshoting
+15. Cache calculated data for reuse
+16. Calculate other reports data in background
+18. While importing data all masters [Account (Customers, etc)] are searched by name and full address. 
+	For this reason more than one accounts are getting created for the same account/customer.
+	Hence all the reports are showing separate records for same account.
+	This will affect the quality of the report like Top N customers.
+
+Release Checklist-----
+1. Set login password
+2. FMain: Show reports according to login role
+3. Customer support
+	a) Bug reporting
+		i)  For errors	: Date Time, User, Company, Year
+		ii) Others	: Subject and message	
+	b) Support request: 
+		i) Existing item
+	c) New requirement
+	d) Send through E-Mail the above items (use an internal fixed E-MailId)
+4. Setup
+5. Test in Win7, Vista, XP (with and without service packs)
+
+Unimportant:
+-------------------------------
+0. Tally data import
+1. Mobile: Budgets & Targets, and monitoring, CC and OD-utilization & consolidation
+		   terget/budget: yearly, qualrterly, monthly

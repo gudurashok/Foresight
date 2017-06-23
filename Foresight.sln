@@ -1,0 +1,135 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foresight.Logic", "Foresight.Logic\Foresight.Logic.csproj", "{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{73F8033D-2346-40B5-B5E6-0262894D3099}"
+	ProjectSection(SolutionItems) = preProject
+		SolutionItems\BankAccountsDesign.txt = SolutionItems\BankAccountsDesign.txt
+		SolutionItems\Business Domain Model.docx = SolutionItems\Business Domain Model.docx
+		SolutionItems\Business Domains.doc = SolutionItems\Business Domains.doc
+		SolutionItems\BusinesStyles-ItemStyles.txt = SolutionItems\BusinesStyles-ItemStyles.txt
+		SolutionItems\Domain Model Notes.docx = SolutionItems\Domain Model Notes.docx
+		SolutionItems\EASY Database Design.doc = SolutionItems\EASY Database Design.doc
+		SolutionItems\EasyInsight.doc = SolutionItems\EasyInsight.doc
+		SolutionItems\Foresight - BI Suite.doc = SolutionItems\Foresight - BI Suite.doc
+		SolutionItems\Foresight - KPI.txt = SolutionItems\Foresight - KPI.txt
+		SolutionItems\Foresight.sdf = SolutionItems\Foresight.sdf
+		SolutionItems\Foresight.sqlce = SolutionItems\Foresight.sqlce
+		SolutionItems\ForesightData.sdf = SolutionItems\ForesightData.sdf
+		SolutionItems\ForesightData.sqlce = SolutionItems\ForesightData.sqlce
+		SolutionItems\ForesightSplash.pptx = SolutionItems\ForesightSplash.pptx
+		SolutionItems\ForesightTasks.txt = SolutionItems\ForesightTasks.txt
+		SolutionItems\ImportItems.txt = SolutionItems\ImportItems.txt
+		SolutionItems\MCS and TCS import information.txt = SolutionItems\MCS and TCS import information.txt
+		SolutionItems\R2-BI.doc = SolutionItems\R2-BI.doc
+		SolutionItems\Registry settings.txt = SolutionItems\Registry settings.txt
+		SolutionItems\Runtime download links.txt = SolutionItems\Runtime download links.txt
+		SolutionItems\SQL CE Data Types.doc = SolutionItems\SQL CE Data Types.doc
+		SolutionItems\Thread-Sample.txt = SolutionItems\Thread-Sample.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foresight.Server", "Server\Foresight.Server.csproj", "{E8ECA760-9668-4100-872D-C2273637C458}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{4CD3C76B-89A5-4579-B55E-1C94C5D3B6AA}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\back.ico = Resources\back.ico
+		Resources\Backarrow.png = Resources\Backarrow.png
+		Resources\Dashboard.png = Resources\Dashboard.png
+		Resources\Foresight.bmp = Resources\Foresight.bmp
+		Resources\Foresight.ico = Resources\Foresight.ico
+		Resources\ForesightLogo.png = Resources\ForesightLogo.png
+		Resources\ForesightSplash.png = Resources\ForesightSplash.png
+		Resources\loading.gif = Resources\loading.gif
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{0541A5F3-CB19-4167-9939-C9D4B855D8CF}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\SqlCompact4.zip = Libraries\SqlCompact4.zip
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForesightDataUpdateGUI", "ForesightDataUpdateGUI\ForesightDataUpdateGUI.csproj", "{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foresight.Win", "Foresight\Foresight.Win.csproj", "{3567E06F-EEE3-4C29-B651-38149642597D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferry.Logic", "Ferry.Logic\Ferry.Logic.csproj", "{8468826F-0A9D-41D9-AD6F-28499AD53B93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferry.Win", "Ferry.Win\Ferry.Win.csproj", "{29C6970B-CC07-41C5-A60A-51819DD20ADD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8ECA760-9668-4100-872D-C2273637C458}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Debug|x86.ActiveCfg = Debug|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Debug|x86.Build.0 = Debug|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Release|Any CPU.ActiveCfg = Release|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Release|Mixed Platforms.Build.0 = Release|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Release|x86.ActiveCfg = Release|x86
+		{E8ECA760-9668-4100-872D-C2273637C458}.Release|x86.Build.0 = Release|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Debug|x86.ActiveCfg = Debug|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Debug|x86.Build.0 = Debug|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Release|Any CPU.ActiveCfg = Release|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Release|Mixed Platforms.Build.0 = Release|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Release|x86.ActiveCfg = Release|x86
+		{FAC99E7A-4C73-4DCF-968E-A25F39DD2C52}.Release|x86.Build.0 = Release|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Debug|x86.ActiveCfg = Debug|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Debug|x86.Build.0 = Debug|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Release|Any CPU.ActiveCfg = Release|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Release|x86.ActiveCfg = Release|x86
+		{3567E06F-EEE3-4C29-B651-38149642597D}.Release|x86.Build.0 = Release|x86
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8468826F-0A9D-41D9-AD6F-28499AD53B93}.Release|x86.ActiveCfg = Release|Any CPU
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Debug|x86.ActiveCfg = Debug|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Debug|x86.Build.0 = Debug|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Release|Any CPU.ActiveCfg = Release|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Release|Mixed Platforms.Build.0 = Release|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Release|x86.ActiveCfg = Release|x86
+		{29C6970B-CC07-41C5-A60A-51819DD20ADD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

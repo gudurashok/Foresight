@@ -1,0 +1,8 @@
+.NET Framework 4.0 Redist
+http://www.microsoft.com/download/en/details.aspx?id=24872
+
+Sql Compact 4.0 Redist 
+http://www.microsoft.com/download/en/details.aspx?id=17876
+
+Windows installer for WindowsXP
+http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=25

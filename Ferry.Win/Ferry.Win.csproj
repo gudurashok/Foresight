@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29C6970B-CC07-41C5-A60A-51819DD20ADD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ferry.Win</RootNamespace>
+    <AssemblyName>Ferry</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Foresight.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CompanyViewProcessor.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\StopWatch.cs" />
+    <Compile Include="Common\Utilities.cs" />
+    <Compile Include="Forms\FCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCompany.Designer.cs">
+      <DependentUpon>FCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroup.Designer.cs">
+      <DependentUpon>FCompanyGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroupPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroupPeriods.Designer.cs">
+      <DependentUpon>FCompanyGroupPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCompanyGroups.Designer.cs">
+      <DependentUpon>FCompanyGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCompanyPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCompanyPeriod.Designer.cs">
+      <DependentUpon>FCompanyPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FFormBase.Designer.cs">
+      <DependentUpon>FFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FImporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FImporter.Designer.cs">
+      <DependentUpon>FImporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FServer.Designer.cs">
+      <DependentUpon>FServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FCompany.resx">
+      <DependentUpon>FCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCompanyGroup.resx">
+      <DependentUpon>FCompanyGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCompanyGroupPeriods.resx">
+      <DependentUpon>FCompanyGroupPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCompanyGroups.resx">
+      <DependentUpon>FCompanyGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCompanyPeriod.resx">
+      <DependentUpon>FCompanyPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FFormBase.resx">
+      <DependentUpon>FFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FImporter.resx">
+      <DependentUpon>FImporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FServer.resx">
+      <DependentUpon>FServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ferry.Logic\Ferry.Logic.csproj">
+      <Project>{8468826F-0A9D-41D9-AD6F-28499AD53B93}</Project>
+      <Name>Ferry.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Foresight.Logic\Foresight.Logic.csproj">
+      <Project>{39228FC6-B6AD-4B41-84EE-BFE3D70063D9}</Project>
+      <Name>Foresight.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Foresight.ico" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\Foresight.bmp" />
+    <Content Include="Resources\Foresight.ico" />
+    <None Include="Resources\ForesightSplash.png" />
+    <None Include="Resources\ForesightLogo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

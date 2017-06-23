@@ -1,0 +1,23 @@
+??--Account Opening Balance
+??--Item Opening Stock
+?--Item Stock Transfers
+--Item Stock Adjustments
+?--Item BoM definitions
+?--Item Pending Purchases which pending to be issued
+?--Credit Notes
+?--Debit Notes
+-- Consumption: Raw Mat. Consumption Issues
+-- Consumption: Misc. Mat. Issue
+-- Production: Finished Mat. Receiving
+?--Outstanding Adjustment - need opening bills !!!
+?--Sale Orders
+?--Purchase Orders
+?--SaleLineDetails
+?--PurchaseLineDetails
+?--Warehouses
+?--Daybooks
+?--Bank Accounts
+--Item Master Sale/Purchase/Stock Info
+-- Remaining Accounts, Items and other masters
+---------------------------------------------------------
+AccountContacts

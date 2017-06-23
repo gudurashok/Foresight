@@ -1,0 +1,176 @@
+Item
+ID, Code, VendorItemCode, Name, Description
+
+Item 
+Refrigirator
+   Size, 
+   Color,
+   Capacity,
+   Model
+   Style
+   Look
+   Technology,
+   Make
+   SerialNumber
+   Domicile (Country-of-origin)
+
+GODREJ
+SAMSUNG
+LG
+THOSHIBA
+--------------------------------
+-TRADING
+-MANUFACTURING
+-PROJECT-ORIENTED
+-SERVICE-ORIENTED
+------------
+Sale Order
+Sale Invoice
+Sale Return
+Sale Order
+Purchase Invoice
+Purchase Return
+Receipts of Cash & Bank
+Payments of Cash & Bank
+Credit Note
+Debit Note
+Issue for Process
+Misc. Issue for Process
+Finished Goods Receive from Process
+Rec/Pay Adjustments
+JV
+Stock Transfer
+
+Opening Amount
+Opening Stock
+
+
+Ledger contents ---------------------
+Opn
+SI
+PI
+Rec
+Pay
+CrN
+DbN
+JV
+
+
+- Account Balance
+- Ledger
+  DocNo, TxnDate, TxnType, Account, Amount, CrDb
+  ----------------------------------------------
+  0001   01/04/11 Sale	   A0001    5000.00  Cr
+
+-- Bill Term Account. Should it be transactional?
+-- in SQL all IDs will change when we import and export data.
+   So there must be some self generate mechanism to circumvent this prob.
+-- GrossAmount, Additions, Deductions, NetAmount, Adjusted, and Balance ??
+-- TxnType? does it needed? or can it be guessed from the trans and table?
+-- Cash Books?
+-- Bank Accounts?
+-- Should single table for both Cash Receipts and Payments be handled?
+-- What about credit card payments / receipts?
+-- Opening Balances Accounts (Customers, Suppliers, Brokers, Bank Balances, Cash Balances etc...)
+-- The main company database should include fields for Slowly Changing Data
+--
+
+Organisation Master
+ID
+Name
+
+Department Master
+ID
+Name
+
+Designation Master
+ID
+Name
+
+OrganisationDepartment
+ID
+OrgID
+DepartmentID
+
+PersonDesignation
+ID
+PersonID
+DesignationID
+OrgDepartmentID
+
+---------------------------------
+Company 
+ -- Registration Number
+ -- Form of Company: Pvt, Ind, Pro, etc.
+ -- PAN
+ -- TDS Number & Date
+ -- S.Sale Tax & Date
+ -- C.Sale Tax & Date
+ -- Excise & Date
+ -- Service Tax & Date
+ -- Licenses Info & Date
+
+Customer
+ -- PAN
+ -- SST & Date
+ -- CST & Date
+ --
+
+SalesOrder:
+ -- CustomerID, BrokerID... should this be AccountIDs from Account Master?
+    or CustomerID and BrokerID from Customer and Broker Masters?
+ -- Field Lengths (for Through, Transport) should be compared to prevent
+    data trucation while ETL
+ -- Should re-check Field Nullability, PK, Unique Keys etc.
+ -- Transport could be a shippers or shipping methods
+ -- Check if the total amount of lineItems are matching with header amount
+ -- BookID: Sale, Purchase, JV ?
+
+
+--
+IMPORT
+======
+01. Single account with multiple roles like Customer, Supplier, Broker?
+    -- What if user wants keep single acccount?
+    -- Our Importer create separate accounts
+02. Make Importer to use Generic DAL to allow Export to Any RDBMS(SQL, SQLExpress, SQLCE etc.)
+03. Should Cash Sale be imported as single entry for each day? - Yes
+04. What should do with Contra Accounts (Daybook Account) and Trans?
+05. Import Error Handling and OleDb/SqlCe Exception Handling
+06. Opening Transactions (Balances and Stock)? 
+    -- What if imported from the middle?
+    -- What if imported adhoc years from the middle?
+07. Some data like Shipping Address in SalesInvoice is depends on
+    AppSetting so there is no other way to know whether inert a record in
+    SalexInvocieEx table. -- Check all the fields whther they are blank
+08. PricePer and CostrPer should be stored in LineItem also
+09. To speedup loading... 
+    -- Limit the columns in the quesry instead of reading with T.*, I.*...
+    -- Read all the data (header, line-item, terms, masters etc.) at once.
+10. Why we would need masters...?
+    -- Can we keep also denormalise the master info in the transaction?
+11. Data Intergrity Errors: if an account or item code is not found in the
+    master table bt referenced in the transaction then it should log them
+    -- It should also insert master data with error values like <Error...>
+12. BillTerm Master used Daybook: Did not inserted master ??? is it needed?
+13. What about Deleted Records in Source Data?
+14. Transaction Insert SQL Params Creation: Consolidate all into one
+15. SqlCeParameters can be added once and set the value several time to
+    increase speed
+16. DataImporterClass: Split into Functionality wise (Sale, Purchase...)
+17. Source Data: Should check for integrity before starting import by...
+    -- checking number of files and thier names...
+    -- check the structure of like TXN_FILE.DBF...
+18. Should identity whether already imported or not by keeping a 
+    -- flag/indicator, or check data exist before insert etc.
+    -- can keep and update a flag in the source itself by 
+       updating a field in source TXN table or creating a file in folder
+19. DataImporter: if a GUI is shown then a progress-meter should be shown
+20. What if there are many daybook in each company may have same dbk code
+    and dbk-account may be conflict...
+
+
+
+
+
+
