@@ -320,8 +320,8 @@ namespace ScalableApps.Foresight.Logic.DataAccess
         {
             try
             {
-                var cmd = _db.CreateCommand();
                 _db.BeginTransaction();
+                var cmd = _db.CreateCommand();
 
                 if (cp.IsImported)
                 {
